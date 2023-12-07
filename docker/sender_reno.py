@@ -1,6 +1,7 @@
 import socket
 import time
 
+
 # total packet size
 PACKET_SIZE = 1024
 # bytes reserved for sequence id
@@ -90,10 +91,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as udp_socket:
                    del packet_sent[i]
                    
 
+            
             if prevAck == ack_id:
                 dupCount += 1
                 if dupCount == 2:
-                    window_size = ss_thresh
+                    window_size = ss_thresh + 3
                     ss = False
                     packet_sent[seq_id] = resend(udp_socket, seq_id)
                     totalPackets += 1
@@ -123,13 +125,13 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as udp_socket:
 endTime = time.time()
 timeTaken = endTime - startTime
 throughput = totalPackets * MESSAGE_SIZE / timeTaken
-print(f"Throughput: {throughput} bytes/second")
 
 # compute average delay per packet
 avgDelay = totalDelay / totalPackets
-print(f"Average Delay/Packet: {avgDelay} seconds")
 
 # compute and print the desired metric
 metric = throughput / avgDelay
-print(f"Throughput/Average Delay: {metric}")
-            
+
+# Output the results in the specified format
+print(f"{round(throughput, 2)}, {round(avgDelay, 2)}, {round(metric, 2)}")
+              

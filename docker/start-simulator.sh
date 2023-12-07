@@ -19,7 +19,7 @@ docker run --name="ecs152a-simulator" \
     ecs152a/simulator &
     sleep 5
 
-    python3 sender_stop_and_wait.py 
+    python3 sender_custom.py 
 
     docker stop "ecs152a-simulator"
 

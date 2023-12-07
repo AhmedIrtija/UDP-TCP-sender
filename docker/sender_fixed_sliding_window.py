@@ -108,12 +108,12 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as udp_socket:
 endTime = time.time()
 timeTaken = endTime - startTime
 throughput = totalPackets * MESSAGE_SIZE / timeTaken
-print(f"Throughput: {throughput} bytes/second")
 
 # compute average delay per packet
 avgDelay = totalDelay / totalPackets
-print(f"Average Delay/Packet: {avgDelay} seconds")
 
 # compute and print the desired metric
 metric = throughput / avgDelay
-print(f"Throughput/Average Delay: {metric}")
+
+# Output the results in the specified format
+print(f"{round(throughput, 2)}, {round(avgDelay, 2)}, {round(metric, 2)}")
