@@ -1,6 +1,6 @@
 #  ECS 152A Programming Assignment 3 (Fall 2023)
 
-## Note: This README has changed. Your sender doesn't have to send `-1` to indicate that it has finished sending data.
+## Note: This README, the receiver.py, training_profile.sh, start-simulator.sh, Dockerfile, file.mp3, docker-script.sh were received from the TA's code in the link below 
 Check the `How to use` section of the README for instructions on indicating the end of sending data.
 
 ## Congestion Control
@@ -20,4 +20,13 @@ Derived from https://github.com/Haroon96/ecs152a-fall-2023/tree/main/week7
 6. The sender should then send a message with body '==FINACK' to let the receiver know to exit (see line 31 and 32 in receiver.py)
 7. Both sender and receiver will then exit.
 
-#### You are *not* supposed to make changes to any file in this repository.
+
+### How to run code on windows
+1. Run ```python receiver.py```
+2. Then on a different terminal run any of the sender file
+    * ```python sender_stop_and_wait.py```
+    * ```python sender_fixed_sliding_window.py```
+    * ```python sender_tahoe.py```
+    * ```python sender_reno.py```
+    * ```python sender_custom.py```
+3. Once all the packages has been received it will show the throughput, average delay per packet, and the metrics of throughput per average delay
