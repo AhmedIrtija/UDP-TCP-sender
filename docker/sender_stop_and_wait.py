@@ -98,4 +98,4 @@ avgDelay = sum(delays.values()) / totalPackets
 metric = throughput / avgDelay
 
 # Print the results in the specified format
-print(f"{throughput:.2f}, {avgDelay:.2f}, {metric:.2f}")
+print(f"Throughput - {round(throughput, 2)}, Avg Delay/Packet - {round(avgDelay, 2)}, Throughput/Avg Delay - {round(metric, 2)}")

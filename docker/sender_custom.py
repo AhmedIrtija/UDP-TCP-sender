@@ -57,6 +57,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as udp_socket:
     prevAck = -1
     ss = True
     initial = 1
+    ack_id = -1
     
     while seq_id < len(data):
         
@@ -138,4 +139,4 @@ avgDelay = totalDelay / totalPackets
 metric = throughput / avgDelay
 
 # Output the results in the specified format
-print(f"{round(throughput, 2)}, {round(avgDelay, 2)}, {round(metric, 2)}")
+print(f"Throughput - {round(throughput, 2)}, Avg Delay/Packet - {round(avgDelay, 2)}, Throughput/Avg Delay - {round(metric, 2)}")

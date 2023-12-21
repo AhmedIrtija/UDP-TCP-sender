@@ -21,7 +21,7 @@ Derived from https://github.com/Haroon96/ecs152a-fall-2023/tree/main/week7
 7. Both sender and receiver will then exit.
 
 
-### How to run code on windows
+### How to run code
 1. Run ```python receiver.py```
 2. Then on a different terminal run any of the sender file
     * ```python sender_stop_and_wait.py```
