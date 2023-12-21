@@ -10,6 +10,9 @@ Derived from https://github.com/Haroon96/ecs152a-fall-2023/tree/main/week7
 * [Mac](https://docs.docker.com/desktop/install/mac-install/)
 * [Windows](https://docs.docker.com/desktop/install/windows-install/)
 
+### Virtual Box Installation 
+* [Ubuntu](docker/VirtualBox%20Ubuntu%2020.04%20LTS%20Setup.pdf)
+
 ### How to use
 (From the `docker` directory).
 1. Run `./start-simulator.sh` to start running our receiver with the emulated network profile. Once it's running successfully, you will see a message saying `Receiver running`. 
@@ -22,7 +25,7 @@ Derived from https://github.com/Haroon96/ecs152a-fall-2023/tree/main/week7
 8. Make sure to change the `start-simulator.sh` file to run the specific sender file
 
 
-### How to run code
+### How to run code without any congestion
 1. Run ```python receiver.py```
 2. Then on a different terminal run any of the sender file
     * ```python sender_stop_and_wait.py```
