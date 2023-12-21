@@ -19,7 +19,8 @@ docker run --name="ecs152a-simulator" \
     ecs152a/simulator &
     sleep 5
 
-    python3 sender_reno.py 
+# Change the file name as needed
+    python3 sender_custom.py  
 
     docker stop "ecs152a-simulator"
 

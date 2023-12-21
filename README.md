@@ -19,6 +19,7 @@ Derived from https://github.com/Haroon96/ecs152a-fall-2023/tree/main/week7
 5. Receiver will then send an ack and fin message for the sender to know it's been acknowledged. (Lines 55 to 59 in receiver.py)
 6. The sender should then send a message with body '==FINACK' to let the receiver know to exit (see line 31 and 32 in receiver.py)
 7. Both sender and receiver will then exit.
+8. Make sure to change the `start-simulator.sh` file to run the specific sender file
 
 
 ### How to run code
